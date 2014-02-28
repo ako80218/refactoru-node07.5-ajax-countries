@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container
+    .row
+      .col-md-12
+        h1= title
+        form
+          .form-group
+            input(type='text' name='search')#search-input.form-control.form-margin
+            button(type='submit')#search-countries.btn.btn-default Search Countries
+        ul#countries-list.list-unstyled
+          ul
+        a#load-countries.btn.btn-default(href='#') Load Countries
+  script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js')
+  script(src='/javascripts/main.js')
