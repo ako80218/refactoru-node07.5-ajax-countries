@@ -7,9 +7,11 @@ var express = require('express');
 var indexController = require('./controllers/index.js');
 var http = require('http');
 var path = require('path');
+var mongoose =require('mongoose');
 var countriesController = require('./controllers/countries.js')
 
 var app = express();
+mongoose.connect('mongodb://localhost/countries');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
