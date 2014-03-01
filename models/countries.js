@@ -1419,9 +1419,28 @@
     "frenchName": "Zimbabwe", 
     "localName": "Zimbabwe", 
     "region": "Eastern Africa"
-}]
+}];
+var find = function(query){
+    var allCountries = countries.slice(0);
+    var filteredCountries =[];
+    for(var i=0; i < allCountries.length; i++){
+        var countryName = allCountries[i].name
+        if (countryName.indexOf(query) !== -1){
+            filteredCountries.push(allCountries[i]);
+        }
+    }
+    return filteredCountries;
+};
+var hasTraveled = function(query){
+    var country = find(query);
+    country[0].visited=undefined?true:false;
+    return country[0];
+}
+
 var countriesModel = module.exports = {
     countries : function(){
         return countries.slice(0);
-    }
+    },
+    find: find,
+    hasTraveled: hasTraveled
 }

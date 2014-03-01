@@ -7,5 +7,27 @@ a {
   color: #00B7FF;
 }
 .form-margin{
-    margin: 15px 0;
+    margin: 15px 15px;
+}
+.icon {
+    padding: 0 15px 0 0;
+}
+/*.icon:hover{
+    color: #dedede;
+}*/
+.travled-blue{
+    color: #39b3d7;
+}
+
+.list-item{
+    padding:15px 0;
+    font:  1.5em "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:-10;
+    opacity:0.4;
+    width: 100%;
 }
